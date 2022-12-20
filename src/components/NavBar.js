@@ -1,7 +1,7 @@
 import logo from '../logo-adopciones-quilmes.png'
 import CartWidget from './CartWidget'
 
-export default function NavBar() {
+const NavBar = () => {
     return(
     <nav>
         <div className='navBarLogo'>
@@ -20,3 +20,5 @@ export default function NavBar() {
     </nav>
     )
 }
+
+export default NavBar
