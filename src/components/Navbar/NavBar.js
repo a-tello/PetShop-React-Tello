@@ -1,5 +1,7 @@
-import logo from '../logo-adopciones-quilmes.png'
+import logo from '../../logo-adopciones-quilmes.png'
 import CartWidget from './CartWidget'
+import './NavBar.css'
+
 
 const NavBar = () => {
     return(

@@ -1,0 +1,84 @@
+nav {
+    display: flex;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #cac8c8;
+}
+
+.navBarLogo{
+    width: 100px;
+    height: 100px;
+}
+
+.navBarLogo img{
+    width: 100%
+}
+
+
+.navBarItems {
+    width: 100%;
+}
+
+.navBarItems {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navBarItems li {
+    padding: 10px;
+    margin: 5px;
+}
+
+.navBarItems li a{
+    color: #8f8f8f;
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.navBarItems li a::before{
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #30c75e;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.navBarItems li a:hover, .navBarItems li a:hover::before {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.cart {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart a{
+    width: 50%;
+}
+
+.cartLogo {
+    width: 100%;
+}
+
+.notification {
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: rgb(175, 9, 9);
+    border-radius: 45%;
+}
+

@@ -1,4 +1,5 @@
-import cart from '../cart.svg'
+import cart from '../../cart.svg'
+import './NavBar.css'
 
 const CartWidget = ({quantity = 3}) => {
     return(
