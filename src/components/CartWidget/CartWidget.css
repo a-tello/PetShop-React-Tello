@@ -1,0 +1,24 @@
+.cart {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart a{
+    width: 50%;
+}
+
+.cartLogo {
+    width: 100%;
+}
+
+.notification {
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: rgb(175, 9, 9);
+    border-radius: 45%;
+}
+
