@@ -1,0 +1,41 @@
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    padding: 15px;
+}
+
+li:hover {
+    background-color: #525297;
+}
+
+.navBar {
+    background-color: #404074;
+    font-family: Latto, sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    color: white;
+    font-size: 2rem;
+}
+
+.logo {
+    height: 100%;
+}
+
+.active {
+    background-color: #525297;
+    padding: 10px;
+}
