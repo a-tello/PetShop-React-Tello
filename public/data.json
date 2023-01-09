@@ -1,0 +1,137 @@
+[
+    {
+        "id": "001",
+        "name": "Cama WePet Rayada",
+        "category": "accesorios",
+        "img": "/images/accesories/cama-we-pet.png",
+        "price": "6000",
+        "stock": "5",
+        "description": "Moises Wepets rayado pequeño para perro/gato"
+    },
+    {
+        "id": "002",
+        "name": "Arnes Marvel para perro",
+        "category": "accesorios",
+        "img": "/images/accesories/arnes-para-perro-marvel.jpg",
+        "price": "5950",
+        "stock": "2",
+        "description": "Arnes Marvel para perro pequeño"
+    },
+    {
+        "id": "003",
+        "name": "Comedero para mascotas",
+        "category": "accesorios",
+        "img": "/images/accesories/comedero.jpg",
+        "price": "1100",
+        "stock": "100",
+        "description": "Comedero para perro/gato de acero inoxidable. Posee goma antideslizante y es apto para lavavajillas"
+    },
+    {
+        "id": "100",
+        "name": "Royal Canin 2.5kgs Perro Adulto ",
+        "category": "alimentos",
+        "img": "/images/food/royal-canin-adulto.png",
+        "price": "3300",
+        "stock": "40",
+        "description": "Alimento Royal Canin para perros adultos de razas pequeñas. Bolsa de 2.5Kgs. sabor mixto"
+    },
+    {
+        "id": "101",
+        "name": "Excellent 15kgs Gato Adulto",
+        "category": "alimentos",
+        "img": "/images/food/excellent-gato.jpg",
+        "price": "13500",
+        "stock": "20",
+        "description": "Alimento Excellent para gatos adultos. Bolsa de 15Kgs. sabor pollo y arroz."
+    },
+    {
+        "id": "102",
+        "name": "Alimento Proplan 3kg para perro cachorro",
+        "category": "alimentos",
+        "img": "/images/food/pro-plan-puppy.jpg",
+        "price": "4379",
+        "stock": "50",
+        "description": "Alimento Proplan para perros cachorros de raza mediana. Bolsa de 3Kgs. sabor pollo."
+    },
+    {
+        "id": "200",
+        "name": "Bolsa sanitaria cancat x5.",
+        "category": "higiene",
+        "img": "/images/hygiene/bolsas-cat-can.png",
+        "price": "840",
+        "stock": "50",
+        "description": "Bolsas sanitarias Cancat x5 rollos, 10 unidades por rollo."
+    },
+    {
+        "id": "201",
+        "name": "Alfombra sanitaria x50 unid.",
+        "category": "higiene",
+        "img": "/images/hygiene/alfombra-sanitaria.jpg",
+        "price": "6630",
+        "stock": "8",
+        "description": "Alfombra sanitaria Home Guard para perros y gatos. Medidas: 56x56 cm."
+    },
+    {
+        "id": "202",
+        "name": "Cardina Plástica Removedor Pelos",
+        "category": "higiene",
+        "img": "/images/hygiene/limpiador-pelos.jpg",
+        "price": "1923",
+        "stock": "5",
+        "description": "Cardina Plástica Removedor Pelos Perros Gatos con boton expulsor autolimpiante."
+    },
+    {
+        "id": "300",
+        "name": "Juguete para gatos vara con raton",
+        "category": "juguetes",
+        "img": "/images/toys/vara-raton.jpg",
+        "price": "1214",
+        "stock": "20",
+        "description": "Juguete para gatos Vara con ratón 48cm."
+    },
+    {
+        "id": "301",
+        "name": "Juguete pelota hueca para cachorros",
+        "category": "juguetes",
+        "img": "/images/toys/pelota-animal-pet.jpg",
+        "price": "769",
+        "stock": "30",
+        "description": "Pelota para cachorros flexible hecha de caucho natural"
+    },
+    {
+        "id": "302",
+        "name": "Juguete pelota antiestrés Dispenser",
+        "category": "juguetes",
+        "img": "/images/toys/dispenser.jpg",
+        "price": "2944",
+        "stock": "2",
+        "description": "Juguete Pelota Dispenser Rascals de Comida y Snacks Para Perros"
+    },
+    {
+        "id": "400",
+        "name": "Antipulgas Bravecto para perros grandes",
+        "category": "salud",
+        "img": "/images/health/antipulgas-bravecto.png",
+        "price": "8720",
+        "stock": "1",
+        "description": "Antipulgas Bravecto Bocado Masticable para perros grandes entre 20-40 Kg."
+    },
+    {
+        "id": "401",
+        "name": "Pipeta Broadline Gatos Hasta 7.5 Kg",
+        "category": "salud",
+        "img": "/images/health/broadline.jpg",
+        "price": "2824",
+        "stock": "16",
+        "description": "Antipulgas y antiparásitos Broadlines para gatos hasta 7.5Kg."
+    },
+    {
+        "id": "402",
+        "name": "Pipeta Frontline Plus para Gatos",
+        "category": "salud",
+        "img": "/images/health/frontline-gatos.jpg",
+        "price": "1080",
+        "stock": "18",
+        "description": "Pipeta Frontline Plus para Gatos. Protección contra pulgas, huevos y larvas de pulgas y piojos"
+    }
+]
