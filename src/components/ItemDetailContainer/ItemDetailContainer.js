@@ -1,5 +1,7 @@
+import { getDoc, doc } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { productsCollection } from "../../firebase-config"
 import ItemDetail from '../itemDetail/ItemDetail'
 import './itemDetailContainer.css'
 
@@ -9,11 +11,20 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch('/data.json')
+
+            const selectedProduct = doc(productsCollection, productId)
+            
+            getDoc(selectedProduct)
+                .then((response) => {
+                    setProduct(response.data())
+                })
+
+
+            /* fetch('/data.json')
                 .then((response) => response.json())
                 .then((data) => {
                     const productSelected = data.find((prod) => prod.id === productId)
-                    setProduct(productSelected)})
+                    setProduct(productSelected)}) */
         },2000)
     },[])
 
