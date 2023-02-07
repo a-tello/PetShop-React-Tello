@@ -1,8 +1,14 @@
 import cart from '../../cart.svg'
 import './CartWidget.css'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { context } from '../CartContext/CartProvider'
 
-const CartWidget = ({quantity = 3}) => {
+const CartWidget = ({hardCodequantity = 3}) => {
+
+    const { quantity } = useContext(context)
+    
+
     return(
         <div className='cart'>
             <Link to='/cart'>
@@ -12,6 +18,4 @@ const CartWidget = ({quantity = 3}) => {
         </div>
     )
 }
-
-
 export default CartWidget

@@ -1,0 +1,12 @@
+.cart-container {
+    width: 85vw;
+    height: 90vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.thumbnail {
+    max-width: 100px;
+}

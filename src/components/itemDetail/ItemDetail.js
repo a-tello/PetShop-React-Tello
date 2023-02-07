@@ -1,7 +1,17 @@
 import './itemDetail.css'
 import ItemCounter from '../itemCounter/ItemCounter';
+import '../CartContext/CartProvider'
+import { useContext, useState } from 'react';
+import { context } from '../CartContext/CartProvider';
 
 const ItemDetail = ({ product }) => {
+
+    const { addItem } = useContext(context)
+
+    const handleAdd = (countQuantity) => {
+        addItem(product, countQuantity)
+    }
+
     return (
     <div className='container'>
         <div className='container-img'>
@@ -12,8 +22,8 @@ const ItemDetail = ({ product }) => {
             <h2>{product.name}</h2>
             <span className='price'>${product.price}</span>
             <span>Stock: {product.stock}</span>
-            <ItemCounter maxValue={product.stock}/>
-            <button className='btn'>Agregar al carrito</button>
+            <ItemCounter maxValue={product.stock} handleAdd={handleAdd}/>
+            <button className='btn' onClick={addItem}>Agregar al carrito</button>
             <button className='btn'>Comprar</button>
         </div>
 
