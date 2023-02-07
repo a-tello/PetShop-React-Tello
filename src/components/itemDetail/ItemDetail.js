@@ -1,14 +1,16 @@
 import './itemDetail.css'
 import ItemCounter from '../itemCounter/ItemCounter';
 import '../CartContext/CartProvider'
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { context } from '../CartContext/CartProvider';
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ product, id }) => {
 
     const { addItem } = useContext(context)
 
+
     const handleAdd = (countQuantity) => {
+        product.id = id
         addItem(product, countQuantity)
     }
 

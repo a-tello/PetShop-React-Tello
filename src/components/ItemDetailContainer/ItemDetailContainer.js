@@ -25,13 +25,13 @@ const ItemDetailContainer = () => {
                 .then((data) => {
                     const productSelected = data.find((prod) => prod.id === productId)
                     setProduct(productSelected)}) */
-        },2000)
+        },0)
     },[])
 
 
     return (
         <div className='container-item-detail'>
-            <ItemDetail product={product} />
+            <ItemDetail product={product} id={productId} />
         </div>
     )
 

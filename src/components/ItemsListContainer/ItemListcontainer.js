@@ -41,7 +41,7 @@ const ItemListContainer = ({greeting}) => {
  
 
 
-        },2000)
+        },0)
     },[categoryName])
     
 

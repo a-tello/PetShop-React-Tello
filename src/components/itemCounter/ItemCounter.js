@@ -12,7 +12,6 @@ const ItemCount = ({ maxValue, handleAdd }) => {
     const handleClick = () => {
         handleAdd(quantity)
     }
-    console.log(quantity);
 
     return (
         <div className='counter'>
