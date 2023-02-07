@@ -32,6 +32,9 @@ const Cart = () => {
                     </div>
                     
                 : <h2>'El carrito de compras está vacío'</h2>}
+                <form>
+                    <input></input>
+                </form>
             </div>
             <button className='clearButton' onClick={clear}>Vaciar Carrito</button>
         </>
