@@ -2,41 +2,31 @@
     max-width: 85%;
     min-height: 50%;
     background-color: rgb(255, 255, 255);
-    display: flex;
     margin: 50px auto;
-    justify-content: center;
+    display: flex;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .cart-info {
-    width: 50%;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+}
+
+.products-container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .product-info {
-    width: 50%;
     height: 100px;
     padding: 20px;
     margin: 10px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.product-price {
-    justify-self: end;
-    align-self: center;
-
-}
-
-.product-remove {
-    color: rgb(97, 176, 255);
-}
-
-.product-remove:hover { 
-    color: rgb(145, 145, 145);
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 .thumbnail {
@@ -51,14 +41,32 @@
     font-size: 20px;
 }
 
-.clearButton {
-    background-color: rgb(191, 35, 35);
-    font-weight: bold;
-    font-size: 20px;
+.product-price {
+    justify-self: end;
+    align-self: center;
+
 }
 
-.saleInfo {
-    width: 50%;
+.product-remove, .clearButton {
+    color: rgb(97, 176, 255);
+}
+
+.product-remove:hover, .clearButton:hover { 
+    color: rgb(145, 145, 145);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.clearButton {
+    text-align: start;
+    justify-self: start;
+}
+
+.total {
+    justify-self: end;
+    align-self: flex-end;
+    padding: 15px;
+    font-size: 30px;
 }
 
 .empty-cart {
@@ -83,4 +91,36 @@
     padding: 10px;
     font-size: 20px;
     border-radius: 5px;
+}
+
+.customer-data-form {
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+
+.customer-data-form label {
+    align-self: flex-start;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(171, 171, 171);
+    margin: 5px 0 10px 0;
+}
+
+.customer-data-form input {
+    font-size: 25px;
+    border: none;
+    margin-top: 10px;
+    border-bottom: solid 1px black;
+}
+
+.customer-data-form input:focus {
+    border: none;
+}
+
+.customer-data-form-submit {
+    justify-self: end;
 }

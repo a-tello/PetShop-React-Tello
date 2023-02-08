@@ -1,23 +1,12 @@
-ul {
-    display: flex;
-    justify-content: center;
-}
-
-li {
-    padding: 15px;
-}
-
-li:hover {
-    background-color: #525297;
-}
-
 .navBar {
     background-color: #404074;
     font-family: Latto, sans-serif;
     font-weight: 500;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: center;
     align-items: center;
+
 }
 
 .container-logo {
@@ -33,6 +22,21 @@ li:hover {
 
 .logo {
     height: 100%;
+}
+
+
+.options-menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 4    ;
+}
+
+.options-menu li {
+    padding: 15px;
+}
+
+.options-menu li:hover {
+    background-color: #525297;
 }
 
 .active {

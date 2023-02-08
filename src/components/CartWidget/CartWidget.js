@@ -4,18 +4,16 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { context } from '../CartContext/CartProvider'
 
-const CartWidget = ({hardCodequantity = 3}) => {
+const CartWidget = () => {
 
     const { quantity } = useContext(context)
     
 
     return(
-        <div className='cart'>
-            <Link to='/cart'>
-                <img src={cart} alt='cart logo' className='cartLogo' />
-                <span className='notification'>{quantity}</span>
-            </Link>
-        </div>
+        <Link to='/cart' className='cart'>
+            <img src={cart} alt='cart logo' className='cartLogo' />
+            <span className='notification'>{quantity}</span>
+        </Link>
     )
 }
 export default CartWidget

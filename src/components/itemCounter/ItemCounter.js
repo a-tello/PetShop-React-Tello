@@ -14,11 +14,13 @@ const ItemCount = ({ maxValue, handleAdd }) => {
     }
 
     return (
-        <div className='counter'>
-            <button onClick={removeProdcut}>-</button>
+        <div className='counter-container'>
+            <div className='counter-display'>
+            <button className={`${quantity === 1 ? 'disabled-counter-btn' : 'counter-btn'}`} onClick={removeProdcut}>-</button>
             <span>{quantity}</span>
-            <button onClick={addProduct}>+</button>
-            <button onClick={handleClick}>Agregar al carrito</button>
+            <button className={`${quantity === maxValue ? 'disabled-counter-btn' : 'counter-btn'}`} onClick={addProduct}>+</button>
+            </div>
+            <button className='btn' onClick={handleClick}>Agregar al carrito</button>
         </div>
 
     )

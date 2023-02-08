@@ -22,11 +22,10 @@ const ItemDetail = ({ product, id }) => {
         <div className='container-info'>
             <span className='category'>*{product.category}</span>
             <h2>{product.name}</h2>
+            <p>{product.description}</p>
             <span className='price'>${product.price}</span>
             <span>Stock: {product.stock}</span>
             <ItemCounter maxValue={product.stock} handleAdd={handleAdd}/>
-            <button className='btn' onClick={addItem}>Agregar al carrito</button>
-            <button className='btn'>Comprar</button>
         </div>
 
     </div> 

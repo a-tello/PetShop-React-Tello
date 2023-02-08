@@ -14,7 +14,7 @@ function NavBar() {
             <img className='logo' src={logo} alt=' logo Adopciones Quilmes' />
             <span className='logo-name'>AQ PetShop</span>
         </Link>
-        <ul>
+        <ul className='options-menu'>
             <li>
                 <NavLink to='/category/accesorios'>ACCESORIOS</NavLink>
             </li>
@@ -31,7 +31,7 @@ function NavBar() {
                 <NavLink to='/category/salud'>SALUD</NavLink>
             </li>
         </ul>
-        <CartWidget quantity={5}/>
+        <CartWidget />
 
     </nav>
     
