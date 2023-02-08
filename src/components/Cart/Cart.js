@@ -1,7 +1,6 @@
 import { useContext, useState,  } from "react"
 import { Link } from "react-router-dom"
 import { context } from "../CartContext/CartProvider"
-import OrderForm from "../OrderForm/OrderForm"
 import './cart.css'
 import Swal from "sweetalert2"
 
@@ -81,6 +80,8 @@ const Cart = () => {
                                         </div>
                                 )
                             })}
+                            <span className='clearButton' onClick={clear}>Vaciar carrito</span>
+                            
                             <span className='total'>Total: ${total}</span>
                             </div>
                             <form className='customer-data-form' onSubmit={handleSubmit}>
@@ -94,6 +95,8 @@ const Cart = () => {
                                 <label>CORREO ELECTRÓNICO</label>
                                 <input required type='email' onChange={(e) => setSecondEmail(e.target.value)}></input>
                                 <label>REINGRESE CORREO ELECTRÓNICO</label>
+                                <input required type='number'></input>
+                                <label>INGRESE NUMERO DE TARJETA</label>
                                 <br/>
                                 <br/>
                                 <input className='customer-data-form-submit btn' type='submit' value='Finalizar compra' ></input>
@@ -108,7 +111,6 @@ const Cart = () => {
                             <Link className='empty-cart-button' to='/'>Descubrir productos</Link>
                         </div>}
             </div>
-            <span className='clearButton' onClick={clear}>Vaciar carrito</span>
 
         </>
     )

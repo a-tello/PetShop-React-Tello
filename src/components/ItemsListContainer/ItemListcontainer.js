@@ -42,7 +42,7 @@ const ItemListContainer = ({greeting}) => {
         <div className='item-list-container'>
             <div className='itemContainer'>{greeting}</div>
             {loading 
-            ? <HashLoader className='loader' color="#36d7b7" />
+            ? <HashLoader className='loader' color="#4E4E7E" />
             : <ItemList products={products}/>}
         </div>
     )

@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
     return (
         <div className='container-item-detail'>
             {loading 
-            ? <PulseLoader size={50} color="#2b4fbe" />
+            ? <PulseLoader size={50} color="#4E4E7E" />
             : <ItemDetail product={product} id={productId} />}
         </div>
     )
