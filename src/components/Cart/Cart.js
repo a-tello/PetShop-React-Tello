@@ -1,4 +1,5 @@
-import { useContext, useState } from "react"
+import { useContext,  } from "react"
+import { Link } from "react-router-dom"
 import { context } from "../CartContext/CartProvider"
 import OrderForm from "../OrderForm/OrderForm"
 import './cart.css'
@@ -17,31 +18,34 @@ const Cart = () => {
     } */
 
     return(
-        <>
-            <div className='cart-container'>
-                {cart.length 
-                ? <div>
-                    {cart.map((product) => {
-                        return(
-                        <div className='product-info'>
-                            <div className='thumbnail'>
-                                <img src={product.img} alt={product.name}/>
-                            </div>
-                            <span className='product-name'>{product.name}</span>
-                            <span className='product-price'>{product.quantity}u.x${product.price * product.quantity}</span>
-                            <span data-id={product.id} className='product-remove' onClick={handleRemove}>Eliminar</span>
-                        </div>)
-                            }
-                    )}
-                        <span>Total: {total}</span>
-                        <OrderForm/>
-                    </div>
-                    
-                    
-                : <h2>'El carrito de compras está vacío'</h2>}
-            </div>
-            <button className='clearButton' onClick={clear}>Vaciar Carrito</button>
-        </>
+        <div className='cart-container'>
+            {cart.length 
+            ? <div>
+                {cart.map((product) => {
+                    return(
+                    <div className='product-info'>
+                        <div className='thumbnail'>
+                            <img src={product.img} alt={product.name}/>
+                        </div>
+                        <span className='product-name'>{product.name}</span>
+                        <span className='product-price'>{product.quantity}u.x${product.price * product.quantity}</span>
+                        <span data-id={product.id} className='product-remove' onClick={handleRemove}>Eliminar</span>
+                    </div>)
+                        }
+                )}
+                    <span>Total: {total}</span>
+                    <OrderForm/>
+                    <button className='clearButton' onClick={clear}>Vaciar Carrito</button>
+                </div>
+                
+                
+            : <div className='empty-cart'>
+                    <h2 className='empty-cart-title'>El carrito de compras está vacío</h2>
+                    <p className='empty-cart-description'>Parece que aun no has seleccionado ningun producto. No te preoucpes, podés darte una vuelta por la tienda y elegir lo que quieras</p>
+                    <Link className='empty-cart-button' to='/'>Descubrir productos</Link>
+                </div>}
+                
+        </div>
     )
 }
 export default Cart

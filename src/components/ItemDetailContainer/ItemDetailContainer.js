@@ -1,12 +1,14 @@
 import { getDoc, doc } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { PulseLoader } from "react-spinners"
 import { productsCollection } from "../../firebase-config"
 import ItemDetail from '../itemDetail/ItemDetail'
 import './itemDetailContainer.css'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
+    const [loading, setLoading] = useState(true);
     const { productId } = useParams()
 
     useEffect(() => {
@@ -17,21 +19,18 @@ const ItemDetailContainer = () => {
             getDoc(selectedProduct)
                 .then((response) => {
                     setProduct(response.data())
+                    setLoading(false)
                 })
 
-
-            /* fetch('/data.json')
-                .then((response) => response.json())
-                .then((data) => {
-                    const productSelected = data.find((prod) => prod.id === productId)
-                    setProduct(productSelected)}) */
-        },0)
-    },[])
+        },2000)
+    },[productId])
 
 
     return (
         <div className='container-item-detail'>
-            <ItemDetail product={product} id={productId} />
+            {loading 
+            ? <PulseLoader size={50} color="#2b4fbe" />
+            : <ItemDetail product={product} id={productId} />}
         </div>
     )
 

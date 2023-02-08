@@ -1,4 +1,17 @@
 .itemContainer {
     font-size: 30px;
     padding: 15px;
+    display: flex;
+}
+
+.item-list-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader {
+    margin: 200px auto;
 }

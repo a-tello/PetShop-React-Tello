@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getDocs, query, where } from 'firebase/firestore'
 import { productsCollection } from '../../firebase-config'
+import { HashLoader } from "react-spinners"
 
 
 
 const ItemListContainer = ({greeting}) => {
     
+    const [loading, setLoading] = useState(true)
     const [products, setProducts] = useState([])
     const { categoryName } = useParams()
 
@@ -16,6 +18,7 @@ const ItemListContainer = ({greeting}) => {
     
 
     useEffect(() => {
+        setLoading(true)
         setTimeout(() => {
             const filteredProducts = query(productsCollection, where('category','==', categoryName || ''))
             const productsSelection = categoryName ? filteredProducts : productsCollection
@@ -28,28 +31,20 @@ const ItemListContainer = ({greeting}) => {
                         return productInfo
                     })
                     setProducts(productsList)
+                    setLoading(false)
                 })
-            
-                /* fetch('/data.json')
-                .then((response) => response.json())
-                .then((data) => {
 
-                    const filterProdcuts = data.filter((product) => product.category === categoryName)
-                    
-                    setProducts(productList)
-                    console.log(productList);}) */
- 
-
-
-        },0)
+        },2000)
     },[categoryName])
     
 
     return (
-        <>
+        <div className='item-list-container'>
             <div className='itemContainer'>{greeting}</div>
-            <ItemList products={products}/>
-        </>
+            {loading 
+            ? <HashLoader className='loader' color="#36d7b7" />
+            : <ItemList products={products}/>}
+        </div>
     )
 }
 
