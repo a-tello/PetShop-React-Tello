@@ -1,4 +1,7 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from "react"
+import { addDoc, serverTimestamp } from "firebase/firestore"
+import { ordersCollection } from "../../firebase-config"
+import Swal from "sweetalert2"
 
 export const context = createContext()
 const { Provider } = context
@@ -9,12 +12,14 @@ const CartProvider = ({ children }) => {
     const [quantity, setQuantity] = useState(0)
     const [total, setTotal] = useState(0)
 
+    
 
     const addItem = (item, productQuantity) => {
 
         const addedProduct = isInCart(item.id)
         let totalNuevo
         let cantidadNuevo
+
         if (addedProduct) {
             addedProduct.quantity = productQuantity
             totalNuevo = cart.reduce((a,b) => a+ b.quantity*b.price,0)
@@ -46,13 +51,55 @@ const CartProvider = ({ children }) => {
     
     const isInCart = productId => cart.find(({ id }) => id === productId)
 
+    const addOrder = (customerData) => {
+
+        const cartInfo = cart.map((product) => {
+            return {name: product.name,
+                id: product.id,
+                quantity: product.quantity,
+                price: product.price}
+        })
+
+        
+        const order = {
+            customerInfo: customerData,
+            cart: cartInfo,
+            total,
+            date: serverTimestamp()
+        } 
+        console.log(order);
+        clear()
+
+        const orderDb = addDoc(ordersCollection, order)
+
+        orderDb
+        .then((res) => {
+            Swal.fire(
+            'Compra realizada',
+            `Gracias por comprar en el PetShop de Adopciones Quilmes
+            Su codigo de compra es: ${res.id}`,
+            'success'
+          )
+        })
+          .catch((error) => {
+            Swal.fire(
+                'Error en la compra',
+                'Ocurrió un error inesperado :(. Por favor intente de nuevo mas tarde',
+                'error'
+              )
+          })
+
+    } 
+    
+
     const contextValue = {
         cart,
         quantity,
         total,
         addItem,
         removeItem,
-        clear
+        clear,
+        addOrder
     }
 
     return(

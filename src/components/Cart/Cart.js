@@ -1,19 +1,24 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { context } from "../CartContext/CartProvider"
+import OrderForm from "../OrderForm/OrderForm"
 import './cart.css'
 
 const Cart = () => {
-    
+
     const { cart, clear, removeItem, total } = useContext(context)
+    
 
     const handleRemove = (e) =>{
         const idProduct = e.target.getAttribute('data-id')
         removeItem(idProduct)
     }
+    /* const handleSubmit = (e) =>{
+        
+    } */
 
     return(
         <>
-            <div className='cart-info'>
+            <div className='cart-container'>
                 {cart.length 
                 ? <div>
                     {cart.map((product) => {
@@ -29,12 +34,11 @@ const Cart = () => {
                             }
                     )}
                         <span>Total: {total}</span>
+                        <OrderForm/>
                     </div>
                     
+                    
                 : <h2>'El carrito de compras está vacío'</h2>}
-                <form>
-                    <input></input>
-                </form>
             </div>
             <button className='clearButton' onClick={clear}>Vaciar Carrito</button>
         </>

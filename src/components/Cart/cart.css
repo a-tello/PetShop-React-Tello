@@ -39,8 +39,6 @@
     cursor: pointer;
 }
 
-
-
 .thumbnail {
     max-width: 100px;
 }
@@ -62,3 +60,4 @@
 .saleInfo {
     width: 50%;
 }
+

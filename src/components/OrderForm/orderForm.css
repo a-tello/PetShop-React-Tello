@@ -1,0 +1,28 @@
+.customer-data-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.customer-data-form label {
+    align-self: flex-start;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(171, 171, 171);
+    margin: 5px 0 10px 0;
+}
+
+.customer-data-form input {
+    font-size: 25px;
+    border: none;
+    margin-top: 10px;
+    border-bottom: solid 1px black;
+}
+
+.customer-data-form input:focus {
+    border: none;
+}
+
+.customer-data-form-submit {
+    justify-self: end;
+}
