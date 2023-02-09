@@ -42,4 +42,6 @@
 .active {
     background-color: #525297;
     padding: 10px;
+    padding-bottom: 30px;
+    border-bottom: 4px solid #6bc5e6;
 }

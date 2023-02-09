@@ -11,9 +11,7 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     const [quantity, setQuantity] = useState(0)
     const [total, setTotal] = useState(0)
-
     
-
     const addItem = (item, productQuantity) => {
 
         const addedProduct = isInCart(item.id)
@@ -67,8 +65,7 @@ const CartProvider = ({ children }) => {
             total,
             date: serverTimestamp()
         } 
-        console.log(order);
-        clear()
+        
 
         const orderDb = addDoc(ordersCollection, order)
 
@@ -80,6 +77,7 @@ const CartProvider = ({ children }) => {
             Su codigo de compra es: ${res.id}`,
             'success'
           )
+          clear()
         })
           .catch((error) => {
             Swal.fire(
