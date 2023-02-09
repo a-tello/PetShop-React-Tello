@@ -1,0 +1,44 @@
+.form-container {
+    width: 50%;
+    background-color: white;
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customer-data-form {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 10px;
+}
+
+
+.customer-data-form label {
+    align-self: flex-start;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(171, 171, 171);
+    margin: 5px 0 10px 0;
+}
+
+.customer-data-form input {
+    font-size: 25px;
+    border: none;
+    margin-top: 10px;
+    border-bottom: solid 1px black;
+}
+
+.customer-data-form input:focus {
+    border: none;
+}
+
+.customer-data-form-submit {
+    justify-self: end;
+    align-self: center;
+    background-color: #4E4E7E;
+}
