@@ -13,6 +13,13 @@ En este proyecto se pueden encontrar las siguientes funcionalidades:
 * Vaciar carrito de compras
 * Simular finalización de compra
 
+### Futuras implementaciones
+Se buscará:
+* Adaptar la página a vista móvil.
+* Generar un sistema de autenticación/login
+* Personalización de items de compra
+* Buscador de órdenes de compra
+
 
 ### Tecnologías utilizadas
 
@@ -39,3 +46,6 @@ Librerías:
 
 
 ### Demo
+Puedes hacer la simulación de compra desde la página del [PetShop Adopciones Quilmes](https://aq-pet-shop.vercel.app/)
+
+También puedes ver el siguiente [video]() donde se muestra la librería de firebase en uso.
